@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="root" prefHeight="540.0" prefWidth="852.0" styleClass="AnchorPane" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.TelaProdutoController">
+   <left>
+      <HBox fx:id="pDados" prefHeight="420.0" prefWidth="374.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="420.0" prefWidth="374.0" styleClass="telaMeioPrincipal">
+               <children>
+                  <AnchorPane id="AnchorPane" prefHeight="403.0" prefWidth="356.0">
+                     <children>
+                        <Label layoutX="15.0" layoutY="40.0" styleClass="cadastro" text="Código:" />
+                        <Label layoutX="17.0" layoutY="97.0" styleClass="cadastro" text="Nome: " />
+                        <Label layoutX="18.0" layoutY="141.0" styleClass="cadastro" text="Preço unitário:" />
+                        <Label layoutX="18.0" layoutY="190.0" styleClass="cadastro" text="Unidade:" />
+                        <TextField fx:id="txCodigo" layoutX="75.0" layoutY="35.0" styleClass="caixas" />
+                        <TextField fx:id="txNome" layoutX="75.0" layoutY="92.0" prefHeight="25.0" prefWidth="197.0" styleClass="caixas" />
+                        <TextField fx:id="txPreco" layoutX="141.0" layoutY="138.0" prefHeight="25.0" prefWidth="92.0" styleClass="caixas" />
+                        <TextField fx:id="txUnidade" layoutX="112.0" layoutY="187.0" prefHeight="25.0" prefWidth="121.0" styleClass="caixas" />
+                     </children>
+                  </AnchorPane>
+                  <HBox fx:id="pBotoes" prefHeight="100.0" prefWidth="200.0" styleClass="telasBotoes">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#gravar" prefWidth="55.0" styleClass="caixas" text="Gravar" />
+                        <Button layoutX="184.0" layoutY="48.0" mnemonicParsing="false" onAction="#excluir" prefHeight="26.0" prefWidth="59.0" styleClass="caixas" text="Excluir" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </left>
+   <top>
+      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="cadastro" text="Cadastro de Produtos" BorderPane.alignment="CENTER" />
+   </top>
+   <right>
+      <HBox fx:id="pTabela" prefHeight="420.0" prefWidth="562.0" styleClass="telasInternas" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tabela" prefHeight="420.0" prefWidth="489.0" styleClass="caixas">
+              <columns>
+                <TableColumn fx:id="colCodigo" prefWidth="75.0" text="Cod." />
+                <TableColumn fx:id="colNome" prefWidth="247.0" text="Nome" />
+                  <TableColumn fx:id="colPreco" prefWidth="91.0" text="Preço" />
+                  <TableColumn fx:id="colUnidade" prefWidth="75.0" text="Unidade" />
+              </columns>
+            </TableView>
+            <VBox fx:id="pBotoes2" prefHeight="420.0" prefWidth="71.0" styleClass="telasBotoes">
+               <children>
+                  <ToggleButton fx:id="btNovo" mnemonicParsing="false" onAction="#inserir" prefWidth="50.0" style="-fx-background-radius: 10;" styleClass="btNovo" text="Novo">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="gbBotoes" />
+                     </toggleGroup></ToggleButton>
+                  <ToggleButton fx:id="btSair" layoutX="23.0" layoutY="208.0" mnemonicParsing="false" onAction="#sair" prefWidth="50.0" style="-fx-background-radius: 10;" styleClass="button" text="Sair" toggleGroup="$gbBotoes" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </right>
+</BorderPane>

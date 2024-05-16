@@ -1,0 +1,76 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Author     : gmend
+*/
+
+.AnchorPane{
+    -fx-background-image: url("bread.jpg");
+}
+
+.tela1{
+    -fx-font-family: "Times new Roman", Georgia, Serif;
+    -fx-font-size: 20pt;
+    -fx-font-weight: bold;
+    -fx-text-align: center;
+    -fx-text-fill: white;
+}
+
+.diaSemana{
+    -fx-font-family: "Times new Roman", Georgia, Serif;
+    -fx-font-size: 15pt;
+    -fx-font-weight: bold;
+    -fx-text-align: center;
+    -fx-text-fill: white;
+}
+
+.cadastro{
+    -fx-font-family: "Times new Roman", Georgia, Serif;
+    -fx-font-size: 12pt;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.lancamento{
+    -fx-font-family: "Times new Roman", Georgia, Serif;
+    -fx-font-size: 10pt;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.fechamento{
+    -fx-font-family: "Times new Roman", Georgia, Serif;
+    -fx-font-size: 13pt;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+
+}
+
+.btNovo:selected{
+    -fx-background-color: orange;
+    -fx-text-fill: #ffffff; 
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0, 0);
+}
+.button{
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 9pt;
+    -fx-background-color: #e9e9e9;
+    -fx-border-radius: 5px;
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0.5, 0, 0);   
+
+}
+
+
+.button:hover{
+    -fx-background-color:orange;
+}
+
+.caixas{
+    -fx-background-radius: 10;
+}
+
+.hboxfinal{
+   -fx-text-align: center;
+}

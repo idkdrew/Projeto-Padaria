@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="AnchorPane" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.FechamentoComandaFXMLController">
+   <right>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tabela" prefHeight="200.0" prefWidth="200.0" styleClass="caixas">
+              <columns>
+                <TableColumn fx:id="tbNome" prefWidth="129.60003662109375" text="Nome " />
+                <TableColumn fx:id="tbPreco" prefWidth="69.5999755859375" text="Preço" />
+              </columns>
+            </TableView>
+         </children>
+      </HBox>
+   </right>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="108.0" layoutY="14.0" styleClass="fechamento" text="Fechamento de comanda" />
+            <Label layoutX="116.0" layoutY="122.0" style="-fx-font-size: 20;" styleClass="fechamento" text="Valor total a pagar:" />
+            <Button layoutX="110.0" layoutY="285.0" mnemonicParsing="false" onAction="#pagar" styleClass="caixas" text="Pagar" />
+            <Button layoutX="243.0" layoutY="285.0" mnemonicParsing="false" onAction="#voltar" styleClass="caixas" text="Voltar" />
+            <ChoiceBox fx:id="slcComanda" layoutX="100.0" layoutY="68.0" prefWidth="150.0" styleClass="caixas" />
+            <Label layoutX="121.0" layoutY="40.0" styleClass="fechamento" text="Selecione a comanda:" />
+            <Button fx:id="confirmBt" layoutX="256.0" layoutY="68.0" mnemonicParsing="false" onAction="#confirma" styleClass="caixas" text="Confirmar" />
+            <HBox fx:id="hboxfinal" layoutX="169.0" layoutY="185.0" prefHeight="100.0" prefWidth="200.0" styleClass="hboxfinal">
+               <children>
+                  <Label fx:id="vlrFinal" alignment="CENTER" styleClass="fechamento" text="VALOR FINAL" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

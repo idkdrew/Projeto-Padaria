@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="400.0" prefWidth="600.0" styleClass="AnchorPane" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.FXMLController">
+   <children>
+      <Button fx:id="selectcomanda" layoutX="240.0" layoutY="187.0" mnemonicParsing="false" onAction="#selecionar" styleClass="caixas" text="Selecionar comanda" />
+      <Button fx:id="consultarcomanda" layoutX="247.0" layoutY="251.0" mnemonicParsing="false" onAction="#consultar" styleClass="caixas" text="Fechar comanda" />
+      <Button fx:id="cadprod" layoutX="237.0" layoutY="122.0" mnemonicParsing="false" onAction="#cadastro" styleClass="caixas" text="Cadastro de produto" />
+      <Button layoutX="280.0" layoutY="322.0" mnemonicParsing="false" onAction="#sair" styleClass="caixas" text="Sair" />
+      <Label layoutX="189.0" layoutY="43.0" styleClass="tela1" stylesheets="@estilo.css" text="Padaria Doce Sabor" />
+      <Label fx:id="diaSemana" layoutX="247.0" layoutY="73.0" styleClass="diaSemana" text="dia da semana" />
+   </children>
+</AnchorPane>
